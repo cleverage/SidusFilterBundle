@@ -1,5 +1,5 @@
 {
-    "name": "sidus/filter-bundle",
+    "name": "cleverage/filter-bundle",
     "description": "Simple yml-configuration-based filtering with Doctrine ORM abstraction",
     "keywords": [
         "filter",
@@ -24,24 +24,22 @@
             "role": "Developer"
         }
     ],
-    "autoload": {
-        "psr-4": {
-            "Sidus\\FilterBundle\\": ""
-        }
-    },
     "require": {
         "php": ">=7.1",
-        "symfony/dependency-injection": "~3.0|~4.0",
-        "symfony/http-kernel": "~3.0|~4.0",
-        "symfony/config": "~3.0|~4.0",
-        "symfony/form": "~3.0|~4.0",
-        "symfony/options-resolver": "~3.0|~4.0",
-        "symfony/http-foundation": "~3.0|~4.0",
-        "symfony/property-access": "~3.0|~4.0",
-        "white-october/pagerfanta-bundle": "~1.0",
-        "sidus/base-bundle": "~1.0"
+        "white-october/pagerfanta-bundle": "^1.0",
+        "sidus/base-bundle": "^1.0",
+        "doctrine/doctrine-bundle": "*",
+        "doctrine/orm": "*"
     },
-    "suggest": {
-        "doctrine/doctrine-bundle": "Without Doctrine ORM, this bundle won't do anything out of the box"
+    "require-dev": {
+        "johnkrovitch/test-pack": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sidus\\FilterBundle\\": "src/"
+        }
+    },
+    "config": {
+        "bin-dir": "bin"
     }
 }
